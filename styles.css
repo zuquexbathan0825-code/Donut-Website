@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.donut-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.donut-icon svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.5));
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.website-link {
+    display: inline-block;
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    transition: color 0.3s ease;
+}
+
+.website-link:hover {
+    color: #00ccff;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    border-color: rgba(0, 102, 255, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.plus {
+    color: #0099ff;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.features-list li {
+    padding: 8px 0;
+    color: #b0b0b0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+    position: relative;
+    padding-left: 20px;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.features-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0099ff;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid rgba(0, 102, 255, 0.5);
+    border-radius: 6px;
+    background: transparent;
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: 'Courier New', monospace;
+}
+
+.btn-price:hover {
+    background: rgba(0, 102, 255, 0.1);
+    border-color: rgba(0, 102, 255, 0.8);
+}
+
+.btn-trial {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-trial:hover {
+    background: transparent;
+    border-color: rgba(0, 102, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
